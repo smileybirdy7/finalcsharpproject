@@ -22,5 +22,11 @@ public class PlayerName : Name
         {
             Debug.Log("The player will triumph over their enemies and win the game.");
         }
+
+    int myInt = "Please enter a weapon of your choice or we will select one for you.";
+
+    int myInt = "Please choose a villian to fight against.";
+
     }
+
 }
