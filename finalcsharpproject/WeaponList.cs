@@ -2,84 +2,68 @@ using System.Collections.Generic;
 using System;
 public class WeaponList
 {
-    private void ChangeList()
-
-    {
-        foreach (string weapon in listOfWeapons)
-        {
-            //Console.WriteLine(weapon.name + "is the name of your weapon.");
-            //Console.WriteLine(weapon.power + "is the power of your weapon.");
-        }
-        Console.WriteLine(listOfWeapons.Count);
-
-    string newWeapon;
-        
+    private void ChangeList(string name, int power) {
+    
+        Weapon newWeapon = new Weapon(); 
+        string Weaponname = Console.ReadLine();
+        string Weaponpower = (Console.ReadLine());
         listOfWeapons.Add(newWeapon);
-        ChangeList();
     }
 
 
     //List
-    public List<string> listOfWeapons;
+    public List<Weapon> listOfWeapons;
 
     public void RunList()
     {
-        listOfWeapons = new List<string>();
+        listOfWeapons = new List<Weapon>();
+        ChangeList("Hammer", 10);
+        
 
-        ChangeList();
     }
 
-    public class Array : Weapons
+}
+
+public class Array : Weapon
 {
-    public GameObject[] weapons;
-    {
-    int[] myWeaponArray = {"Sword", "Knife", "Torch", "Water", "Wind"};
+    string[] myWeaponArray = { "Sword", "Knife", "Torch", "Water", "Wind" };
+}
 
-    void Start ()
-    {
-        weapons = GameObject.FindGameObjectsWithTag("Weapon");
+    public class WeaponScript : Weapon
+{
+    public int choices = 5;
 
-        for(int i = 0; i < weapons.Length; i++)
+    void WeaponSelection()
+    {
+        switch (choices)
         {
-            Debug.Log("Weapon Number "+i+" is named " +weapons[i].name);
-            }
-
-    public class WeaponScript : ChoiceOfWeaponary
-    {
-        public int choices = 5;
-
-
-        void WeaponSelection()
-        {
-            switch (choices)
-            {
             case 5:
-                print ("Your first choice of weaponary is a silver, metal sword.");
+                Console.WriteLine("Your first choice of weaponary is a silver, metal sword.");
                 break;
             case 4:
-                print ("Your second choice of weaponary is a newly sharpened knife.");
+                Console.WriteLine("Your second choice of weaponary is a newly sharpened knife.");
                 break;
             case 3:
-                print ("Your third choice of weaponary is unextinguishable torch.");
+                Console.WriteLine("Your third choice of weaponary is unextinguishable torch.");
                 break;
-            case 4:
-                print ("Your fourth choice of weaponary is an unlimited amount of water.");
+            case 2:
+                Console.WriteLine("Your fourth choice of weaponary is an unlimited amount of water.");
                 break;
-            case 5:
-                print ("Your fifth and final choice of weaponary is wind from Mother Nature herself.");
+            case 1:
+                Console.WriteLine("Your fifth and final choice of weaponary is wind from Mother Nature herself.");
                 break;
             default:
-                print ("If you do not select one of the five choices of weaponary, you are left with your own common sense.");
+                Console.WriteLine("If you do not select one of the five choices of weaponary, you are left with your own common sense.");
                 break;
-                }
-
-
+        }
+    }
 }
-     
-    
-       
 
-     
-    
-        
-    
+
+
+
+
+
+
+
+

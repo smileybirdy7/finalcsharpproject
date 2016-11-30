@@ -1,4 +1,4 @@
-﻿using System; 
+﻿using System;
 
 namespace ConsoleApplication
 {
@@ -6,24 +6,25 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            MyFunction();
-            myInt = IntFunction(22);
-            string myString = StringFunction(Console.ReadLine());
-            Console.WriteLine(myString);
+            WeaponList wl = new WeaponList();
+            wl.RunList();
         }
-    }
-    public int myInt = 10;
-    
-    public void MyFunction () {
-        Console.WriteLine("Run Function");
+        public static int myInt = 10;
+
+        public static void MyFunction()
+        {
+            Console.WriteLine("Run Function");
+        }
+
+        public static int IntFunction(int _peram)
+        {
+            return _peram + myInt;
+        }
+
+        public static string StringFunction(string _name)
+        {
+            return "You did well" + _name;
+        }
+
     }
 }
-    public int IntFunction (int _peram) {
-        return _peram + myInt;
-
-    public static string StringFunction (string_name) {
-        return "You did well" + _name;
-    }
-    
-    }

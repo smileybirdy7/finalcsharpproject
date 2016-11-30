@@ -4,7 +4,7 @@ public class IntroductionFunction: WelcometoGameofImagination {
 
 int myInt = "Welcome gamer to the Game of Imagination. In this game you and your imagination will be playing against the forces of evil.";
 
-int myInt = "Please enter your name or your favorite character name.";
+int myInt = "Please select a character name.";
 
 public class PlayerName : Name
 {
@@ -30,3 +30,5 @@ public class PlayerName : Name
     }
 
 }
+
+   
